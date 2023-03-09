@@ -16,6 +16,32 @@ $(document).ready(function(){
                     $menu.removeClass("fixed");
                 }
             });
+
+            if($("html").scrollTop() > 50) {
+                $menu.addClass("fixed");
+            }
+
+            jQuery("body").on("click", ".product-item .add-to-cart", (function () {
+                $input = jQuery(this).hide().next(".amountBlock").find("input"), $input.val("1"), $input.change()
+            })), jQuery("body").on("click", ".page-index .plus", (function (e) {
+                let o = jQuery(this).parent().find("input"),
+                    t = parseInt(o.val()) + 1;
+                return o.val(t), o.change(), !1
+            })), jQuery("body").on("click", ".page-index .minus", (function (e) {
+                e.preventDefault();
+                let o = jQuery(this).parent().find("input");
+                var t = parseInt(o.val()) - 1;
+                return t = t < 1 ? 0 : t, o.val(t), o.change(), !1
+            })), $(document).on("input change", ".page-index .amountBlock input", (function (e) {
+                let o = $("#b" + $(this).data("id")),
+                    t = $("#q" + $(this).data("id"));
+                $(this).val() <= 0 ? (o.css("display", "block"), o.removeClass("disabled"), t.removeClass("shown")) : (o.addClass("disabled"), t.addClass("shown"));
+                }))
+                
+            $("button").click(function(){
+                $("html").scrollTop($("html").scrollTop() - 60);
+                console.log($("html").scrollTop())
+            });
         });
     
 function addPitsa() {
