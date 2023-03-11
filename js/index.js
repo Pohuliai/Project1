@@ -12,7 +12,7 @@ $(document).ready(function(){
             $(window).scroll(function(){
                 if ( $(this).scrollTop() > 100){
                     $menu.addClass("fixed");
-                } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed") && !$("#popup-cart").hasClass("open")) {
                     $menu.removeClass("fixed");
                 }
             });
@@ -22,7 +22,12 @@ $(document).ready(function(){
             }
 
             jQuery("body").on("click", ".product-item .add-to-cart", (function () {
-                $input = jQuery(this).hide().next(".amountBlock").find("input"), $input.val("1"), $input.change()
+                if ($(this).hasClass("no-plus")) {
+                    let e = $(this).data("id"),
+                        o = $(this).data("id_hash"),
+                        t = $(this).data("group");
+                    "pizza" === t ? primo.pizza_card_modal_open(e, o) : "combo" === t && primo.combo_card_modal_open(e, o)
+                } else $input = jQuery(this).hide().next(".amountBlock").find("input"), $input.val("1"), $input.change()
             })), jQuery("body").on("click", ".page-index .plus", (function (e) {
                 let o = jQuery(this).parent().find("input"),
                     t = parseInt(o.val()) + 1;
@@ -36,9 +41,38 @@ $(document).ready(function(){
                 let o = $("#b" + $(this).data("id")),
                     t = $("#q" + $(this).data("id"));
                 $(this).val() <= 0 ? (o.css("display", "block"), o.removeClass("disabled"), t.removeClass("shown")) : (o.addClass("disabled"), t.addClass("shown"));
+                })), jQuery("body").on("click", ".bag-ico-box", (function () {
+                    var $menu = $("#menu");
+                    if ($("html").scrollTop() < 50){
+                        if( $("#popup-cart").hasClass("open")){
+                            $menu.removeClass("fixed");
+                            $("#popup-cart").removeClass("open").css("display","none")
+                        } else {
+                            $menu.addClass("fixed");
+                            $("#popup-cart").addClass("open").css("display","block")
+                        }
+                    } else if( $("#popup-cart").hasClass("open")){
+                        $("#popup-cart").removeClass("open").css("display","none")
+                    } else {
+                        $("#popup-cart").addClass("open").css("display","block")
+                    }
+                })), jQuery("#popup-cart").on("click", ".spin-btn.add-count.js-increment-cart", (function () {
+                    let o = jQuery(this).parent().find("input"),
+                    t = parseInt(o.val()) + 1;
+                    return o.val(t), o.change(), !1
+
+
+                })), jQuery("#popup-cart").on("click", ".spin-btn.remove-count.js-decrement-cart", (function () {
+                    let o = jQuery(this).parent().find("input"),
+                    t = parseInt(o.val()) - 1;
+                    return o.val(t), o.change(), !1
+                })),jQuery("#popup-cart").on("click", "a", (function () {
+                    jQuery(this).parent().remove()
                 }))
                 
-            $("button").click(function(){
+
+
+            $("button").click(function(){ 
                 $("html").scrollTop($("html").scrollTop() - 60);
                 console.log($("html").scrollTop())
             });
