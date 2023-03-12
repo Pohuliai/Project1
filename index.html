@@ -38,18 +38,18 @@
                 <div class="users_menu-container">
                     <div class="users_menu">
                         <div class="bag-ico-box">
-                            
-                                <i>
-                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Кошик</title>
-                                        <g transform="matrix(0.39 0 0 0.39 0 0)">
-                                            <path class="cls-1"
-                                                d="M70.55,79.94,66,26.53a7,7,0,0,0-7-6.45H51.33V16a16,16,0,0,0-32.09,0v4H11.62a7,7,0,0,0-7,6.45L0,79.94a7.05,7.05,0,0,0,7,7.65H63.52a7.05,7.05,0,0,0,7-7.65ZM23.75,16a11.53,11.53,0,0,1,23.07,0v4H23.75ZM65.39,82.26a2.51,2.51,0,0,1-1.87.82H7.05a2.54,2.54,0,0,1-2.53-2.76L9.09,26.92a2.52,2.52,0,0,1,2.53-2.32h7.63V31a2.26,2.26,0,0,0,4.51,0V24.59H46.82V31a2.26,2.26,0,0,0,4.51,0V24.59H59a2.52,2.52,0,0,1,2.53,2.32l4.56,53.41A2.51,2.51,0,0,1,65.39,82.26Z"
-                                                fill="black" />
-                                        </g>
-                                    </svg>
-                                </i>
-                            
+
+                            <i>
+                                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Кошик</title>
+                                    <g transform="matrix(0.39 0 0 0.39 0 0)">
+                                        <path class="cls-1"
+                                            d="M70.55,79.94,66,26.53a7,7,0,0,0-7-6.45H51.33V16a16,16,0,0,0-32.09,0v4H11.62a7,7,0,0,0-7,6.45L0,79.94a7.05,7.05,0,0,0,7,7.65H63.52a7.05,7.05,0,0,0,7-7.65ZM23.75,16a11.53,11.53,0,0,1,23.07,0v4H23.75ZM65.39,82.26a2.51,2.51,0,0,1-1.87.82H7.05a2.54,2.54,0,0,1-2.53-2.76L9.09,26.92a2.52,2.52,0,0,1,2.53-2.32h7.63V31a2.26,2.26,0,0,0,4.51,0V24.59H46.82V31a2.26,2.26,0,0,0,4.51,0V24.59H59a2.52,2.52,0,0,1,2.53,2.32l4.56,53.41A2.51,2.51,0,0,1,65.39,82.26Z"
+                                            fill="black" />
+                                    </g>
+                                </svg>
+                            </i>
+
                             <span class="price-in-bag hidden">0</span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
             <div class="main-section-product-pizza" id="pizza">
                 <div class="pr-container">
                     <h2 class="section-title">Піца</h2>
-                    <button id="button123" type="button" onclick="addPitsa()">Click Me!</button>
+                    <!-- <button id="button123" type="button" onclick="addPitsa()">Click Me!</button> -->
                     <div class="row">
                         <div class="col-3">
                             <div class="product-item">
@@ -84,15 +84,18 @@
                                     <div class="img-wrap"> <img src="images/2.jpg"> </div>
                                 </div>
                                 <div class="product-name-descr">
-                                    <h3 class="product-title">Пікантне </h3>
+                                    <h3 class="product-title">Пікантне</h3>
                                     <div class="product-descr">Солодка цибуля та болгарський перець, балик та перець
                                         чилі з сиром моцарела на червоному соусі.</div>
                                 </div>
                                 <div class="product-price">
-                                    <div class="pw-wrap"> <span class="price">від 85 ₴</span> </div>
-                                    <div class="cart-wrap"> <span class="add-to-cart no-plus" id="b650" data-id="650"
-                                            data-id_hash="0A9F1E33C47FD4C5687BB5E1A4125672B0C62576"
-                                            data-group="pizza">вибрати</span> </div>
+                                    <span class="price">280 ₴</span><span class="weight">830 г</span>
+                                <span class="add-to-cart " id="b704">в кошик</span>
+                                <div class="amountBlock " id="q704">
+                                    <span class="minus">-</span>
+                                    <input type="text" value="0" readonly data-id="704">
+                                    <span class="plus">+</span>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -122,8 +125,6 @@
                                     <div class="img-wrap">
                                         <img src="images/704-01.png" alt="Все й одразу">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Все й одразу</h3>
@@ -1221,8 +1222,6 @@
                                     <div class="img-wrap">
                                         <img src="images/352-01.jpg" alt="Кока-кола">
                                     </div>
-
-
                                 </div>
                                 <h3 class="product-title">Кока-кола</h3>
                                 <div class="product-liter"><span class="liter">300 мл</span></div>
@@ -1661,8 +1660,8 @@
     <div id="popup-cart" class="" style="display: none;">
         <div class="cart-container">
             <div class="title">Корзина</div>
-            <div class="cart-item-list ps-container ps-theme-default ps-active-y">
-                <div class="cart-item" data-product-id="9283">
+            <div class="cart-item-list ps-container">
+                <!-- <div class="cart-item" data-product-id="9283">
                     <div class="img">
                         <img src="images/126-01.jpg">
                     </div>
@@ -1879,7 +1878,8 @@
                 </div>
 
                 
-                
+                 -->
+
             </div>
             <div class="js-popup-summary" data-qty="0">
                 <div class="full-price">

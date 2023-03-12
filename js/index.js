@@ -25,23 +25,18 @@ $(document).ready(function () {
             let e = $(this).data("id"),
                 o = $(this).data("id_hash"),
                 t = $(this).data("group");
-            "pizza" === t ? primo.pizza_card_modal_open(e, o) : "combo" === t && primo.combo_card_modal_open(e, o)
-        } else $input = jQuery(this).hide().next(".amountBlock").find("input"), $input.val("1"), $input.change()
+            //"pizza" === t ? primo.pizza_card_modal_open(e, o) : "combo" === t && primo.combo_card_modal_open(e, o)
+            addToCart($(this))
+        } else $input = jQuery(this).hide().next(".amountBlock").find("input"), $input.val("1"), $input.change(), addToCart($(this))
 
         if (jQuery(".price-in-bag").hasClass("hidden")) {
             jQuery(".price-in-bag").removeClass("hidden").text("1")
-            let name = $(this).parent().parent().find("h3").text()
-            let price = $(this).parent().parent().find(".product-price").find(".price").text()
-            //let amount = $(this).parent().parent().find(".product-price").find(".amountBlock").find("input").val()
-            console.log(name)
-            console.log(price)
-            //console.log(amount)
-            addToCart(name,price,1)
-            
+            //addToCart($(this))
         } else {
             let count = jQuery(".price-in-bag").text()
             count++
             jQuery(".price-in-bag").text(count)
+            changeAmount();
         }
     })), jQuery("body").on("click", ".page-index .plus", (function (e) {
         let o = jQuery(this).parent().find("input"),
@@ -49,6 +44,7 @@ $(document).ready(function () {
         let count = jQuery(".price-in-bag").text()
         count++
         jQuery(".price-in-bag").text(count)
+        changeAmount($(this),t)
         return o.val(t), o.change(), !1
     })), jQuery("body").on("click", ".page-index .minus", (function (e) {
         e.preventDefault();
@@ -60,6 +56,7 @@ $(document).ready(function () {
             jQuery(".price-in-bag").addClass("hidden")
         }
         jQuery(".price-in-bag").text(count)
+        changeAmount($(this),t)
         return t = t < 1 ? 0 : t, o.val(t), o.change(), !1
     })), $(document).on("input change", ".page-index .amountBlock input", (function (e) {
         let o = $("#b" + $(this).data("id")),
@@ -103,10 +100,10 @@ $(document).ready(function () {
 
     $("button").click(function () {
         //$("html").scrollTop($("html").scrollTop() - 60);
-        let offset = $("#burger").offset()
-        console.log(offset.top)
-        offset.top = offset.top - 45
-        window.scrollTo(offset)
+        // let offset = $("#burger").offset()
+        // console.log(offset.top)
+        // offset.top = offset.top - 45
+        // window.scrollTo(offset)
     });
 });
 
@@ -118,14 +115,28 @@ function addPitsa() {
     i.append(e)
 }
 
-function addToCart(name,price,amount){
-    let card = '<div class="cart-item" data-product-id="9283"> <div class="img"> <img src="images/126-01.jpg"> </div> <div class="description"> <div class="item-title"> Гурмео метровая <span class="subtitle"></span> </div> <div class="item-price"> 489 грн </div> </div> </div>'
+function addToCart(element){
+    let name = element.parent().parent().find("h3").text()
+    let price = element.parent().parent().find(".product-price").find(".price").text()
+    let img = element.parent().parent().find(".product-image").find(".img-wrap").find("img").attr("src")
+
+    let card = '<div class="cart-item" data-product-id="9283"> <div class="img"> <img src="'+ img +'"> </div> <div class="description"> <div class="item-title">' + name + '<span class="subtitle"></span> </div> <div class="item-count"> <div class="spinner" data-product-id="9283"> <div class="spin-btn remove-count js-decrement-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100"> <path d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" /> <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" /> </svg> </div> <input type="text" class="count-field" value="1" readonly=""> <div  class=" spin-btn add-count js-increment-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100"> <path d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" /> <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" /> </svg> </div>  </div> </div> <div class="item-price">' + price + '</div> </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64"> <path d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" /> <path d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" /> </svg> </a> </div>'
     let i = $(".cart-item-list");
     i.append(card)
 
+    // //let id = $(this)
+
+            // let name = $(this).parent().parent().find("h3").text()
+            // let price = $(this).parent().parent().find(".product-price").find(".price").text()
+            // let img = $(this).parent().parent().find(".product-image").find(".img-wrap").find("img").attr("src")
+            // //let amount = $(this).parent().parent().find(".product-price").find(".amountBlock").find("input").val()
+            // console.log(name)
+            // console.log(price)
+            // console.log(img)
+            // //console.log(amount)
 }
 
-function changeAmount(name,amount){
-
-
+function changeAmount(element,amount){
+    
+    console.log(element)
 }
