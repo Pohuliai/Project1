@@ -13,11 +13,12 @@
     <meta name="robots" content="index,follow">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    
+
     <link rel="stylesheet" id="ideapark-core-css" href="css/min.css" type="text/css" media="all">
-    
+
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/cart.js"></script>
 </head>
 
 <body class="wrap-all">
@@ -28,15 +29,48 @@
                     <div class="menu-menu-1-container">
                         <ul id="primary-menu" class="menu">
                             <li class="menu-item menu-item-product"><a href="index.html#pizza" id="#pizza">Піца</a></li>
-                            <li class="menu-item menu-item-product"><a href="index.html#snack" id="#snack">Закуски</a></li>
+                            <li class="menu-item menu-item-product"><a href="index.html#snack" id="#snack">Закуски</a>
+                            </li>
                             <li class="menu-item menu-item-product"><a href="index.html#sushi" id="#sushi">Суші</a></li>
-                            <li class="menu-item menu-item-product"><a href="index.html#burger" id="#burger">Бургери</a></li>
-                            <li class="menu-item menu-item-product"><a href="index.html#drink" id="#drink">Напої</a></li>
+                            <li class="menu-item menu-item-product"><a href="index.html#burger" id="#burger">Бургери</a>
+                            </li>
+                            <li class="menu-item menu-item-product"><a href="index.html#drink" id="#drink">Напої</a>
+                            </li>
                             <li class="menu-item menu-item-product"><a href="aboutUs.html">Про нас</a></li>
                             <li class="menu-item menu-item-product"><a href="contacts.html">Контакти</a></li>
                         </ul>
                     </div>
                 </nav>
+
+                <div class="users_menu-container">
+                    <div class="users_menu">
+                        <div class="account-box no-log-in">
+                            <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.02 87.59">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #000;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>Вхід</title>
+                                    <g id="Слой_2" data-name="Слой 2">
+                                        <g id="Layer_1" data-name="Layer 1">
+                                            <g id="_Группа_" data-name="<Группа>">
+                                                <path id="_Составной_контур_" data-name="<Составной контур>"
+                                                    class="cls-1"
+                                                    d="M33,41.12A20.56,20.56,0,1,0,12.45,20.56,20.59,20.59,0,0,0,33,41.12ZM33,4.51A16.05,16.05,0,1,1,17,20.56,16.07,16.07,0,0,1,33,4.51Z" />
+                                                <path id="_Составной_контур_2" data-name="<Составной контур>"
+                                                    class="cls-1"
+                                                    d="M65.89,79.2,61.68,57.55A17.15,17.15,0,0,0,48.1,43.94a6.87,6.87,0,0,0-4.5.66,22.9,22.9,0,0,1-21.19,0,6.86,6.86,0,0,0-4.5-.66A17.16,17.16,0,0,0,4.34,57.55L.13,79.2a7.05,7.05,0,0,0,6.92,8.4H59a7.05,7.05,0,0,0,6.92-8.4Zm-5,3a2.53,2.53,0,0,1-2,.92H7.05a2.54,2.54,0,0,1-2.49-3L8.77,58.41a12.66,12.66,0,0,1,10-10,2.31,2.31,0,0,1,.44,0,2.36,2.36,0,0,1,1.09.27,27.41,27.41,0,0,0,25.37,0,2.35,2.35,0,0,1,1.53-.23,12.66,12.66,0,0,1,10,10l4.21,21.65A2.53,2.53,0,0,1,60.93,82.16Z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -46,118 +80,129 @@
         <h1 class="c-page-header__title  c-page-header__title--post ">Оформлення замовлення</h1>
         <div class="row">
             <div class="">
-                <div class = "cart-item-list">
-                <div class="cart-item" id="228">
-                    <div> <img src="images/2.jpg"> </div>
-                    <div class="description">
-                        <div class="item-title">Пікантне<span class="subtitle"></span> </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
-                                    </svg> </div> <input type="text" class="count-field" data-id="690" value="1" readonly="">
-                                <div class=" spin-btn add-count js-increment-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
-                                    </svg> </div>
+                <div class="cart-item-list">
+                    <div class="cart-item" id="228">
+                        <div> <img src="images/2.jpg"> </div>
+                        <div class="description">
+                            <div class="item-title">Пікантне<span class="subtitle"></span> </div>
+                            <div class="item-count">
+                                <div class="spinner" data-product-id="9283">
+                                    <div class="spin-btn remove-count js-decrement-cart"> <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F"
+                                                d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
+                                        </svg> </div> <input type="text" class="count-field" data-id="690" value="1"
+                                        readonly="">
+                                    <div class=" spin-btn add-count js-increment-cart"> <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F"
+                                                d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
+                                        </svg> </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item-price">280 ₴</div>
-                    </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids=""
-                        href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
-                            </path>
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
-                            </path>
-                        </svg> </a>
-                </div>
-                <div class="cart-item" id="228">
-                    <div> <img src="images/2.jpg"> </div>
-                    <div class="description">
-                        <div class="item-title">Пікантне<span class="subtitle"></span> </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
-                                    </svg> </div> <input type="text" class="count-field" data-id="690" value="1" readonly="">
-                                <div class=" spin-btn add-count js-increment-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
-                                    </svg> </div>
+                            <div class="item-price">280 ₴</div>
+                        </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1"
+                            data-contain-ids="" href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                height="35" viewBox="0 0 64 64">
+                                <path
+                                    d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
+                                </path>
+                                <path
+                                    d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
+                                </path>
+                            </svg> </a>
+                    </div>
+                    <div class="cart-item" id="228">
+                        <div class="img"> <img src="images/355-01.jpg"> </div>
+                        <div class="description">
+                            <div class="item-title">Сік Rich Апельсиновий<span class="subtitle"></span> </div>
+                            <div class="item-count">
+                                <div class="spinner" data-product-id="9283">
+                                    <div class="spin-btn remove-count js-decrement-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
+                                        </svg> </div> <input type="text" class="count-field" data-id="355" value="1" readonly="">
+                                    <div class=" spin-btn add-count js-increment-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                            height="30" viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
+                                        </svg> </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item-price">280 ₴</div>
-                    </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids=""
-                        href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
-                            </path>
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
-                            </path>
-                        </svg> </a>
-                </div>
-                <div class="cart-item" id="228">
-                    <img src="images/445-01.jpg">
-                    <div class="description">
-                        <div class="item-title">Картопля по-селянськи <span class="subtitle"></span> </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
-                                    </svg> </div> <input type="text" class="count-field" data-id="445" value="1" readonly="">
-                                <div class=" spin-btn add-count js-increment-cart"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
-                                        height="30" viewBox="0 0 100 100">
-                                        <path
-                                            d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
-                                        </path>
-                                        <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
-                                    </svg> </div>
+                            <div class="item-price">80 ₴</div>
+                        </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids=""
+                            href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
+                                <path
+                                    d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
+                                </path>
+                                <path
+                                    d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
+                                </path>
+                            </svg> </a>
+                    </div>
+                    <div class="cart-item" id="228">
+                        <img src="images/445-01.jpg">
+                        <div class="description">
+                            <div class="item-title">Картопля по-селянськи <span class="subtitle"></span> </div>
+                            <div class="item-count">
+                                <div class="spinner" data-product-id="9283">
+                                    <div class="spin-btn remove-count js-decrement-cart"> <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F"
+                                                d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z"></path>
+                                        </svg> </div> <input type="text" class="count-field" data-id="445" value="1"
+                                        readonly="">
+                                    <div class=" spin-btn add-count js-increment-cart"> <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 100 100">
+                                            <path
+                                                d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z">
+                                            </path>
+                                            <path fill="#00F"
+                                                d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z"></path>
+                                        </svg> </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item-price">35 ₴</div>
-                    </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids=""
-                        href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
-                            </path>
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
-                            </path>
-                        </svg> </a>
+                            <div class="item-price">35 ₴</div>
+                        </div> <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1"
+                            data-contain-ids="" href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                height="35" viewBox="0 0 64 64">
+                                <path
+                                    d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z">
+                                </path>
+                                <path
+                                    d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z">
+                                </path>
+                            </svg> </a>
+                    </div>
                 </div>
-                
-                </div>
+                <div class="total_price">Загальна сума: <span id="total_price">0</span> грн</div>
                 <!-- new form -->
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-6">
                         <div id="order_block" class="form-shipping">
-                            <form id="korzina" action="korzina/" method="post"class="ajax_form af_example form-horizontal wpcf7-form">
-    
+                            <form id="korzina" action="korzina/" method="post"
+                                class="ajax_form af_example form-horizontal wpcf7-form">
                                 <input type="hidden" name="submit1" value="submit1">
                                 <input id="price-total-retriver" type="hidden" name="price-total-retriver" value="2212">
-    
-    
+
                                 <div class="control-group">
                                     <label class="control-label" for="af_fullname">Ім'я*</label>
                                     <div class="controls">
@@ -165,7 +210,7 @@
                                         <span class="error_fullname"></span>
                                     </div>
                                 </div>
-    
+
                                 <div class="control-group">
                                     <label class="control-label" for="af_fullname">Номер телефону*</label>
                                     <div class="controls">
@@ -179,12 +224,13 @@
                                     <label class="control-label" for="af_email">Адреса електронної пошти</label>
                                     <div class="controls">
                                         <input type="email" value="" placeholder="pivo@nure.ua">
-                                        <span class="error_fullname"></span>
+                                        <span class="error_email"></span>
                                     </div>
                                 </div>
-    
+
                                 <div class="control-group">
-                                    <label class="control-label" for="af_delivery-method">Выберіть спосіб доставки:</label>
+                                    <label class="control-label" for="af_delivery-method">Выберіть спосіб
+                                        доставки:</label>
                                     <div class="controls">
                                         <select id="delivery-method" class="delivery-method" name="delivery-method">
                                             <option value="Курьерская доставка">Кур'єрська доставка по Харкову</option>
@@ -193,7 +239,7 @@
                                         <span class="error_delivery-method"></span>
                                     </div>
                                 </div>
-    
+
                                 <div class="control-group">
                                     <div class="controls">
                                         <select id="pickup-method" class="delivery-method" style="display: none;"
@@ -208,34 +254,31 @@
                                         <span class="error_delivery-method"></span>
                                     </div>
                                 </div>
-    
+
                                 <div class="control-group">
                                     <div class="controls">
                                         <p width="100%" id="address">
-                                            <textarea style="width:100%" rows="3" placeholder="Адреса*" name="address"></textarea>
+                                            <textarea style="width:100%" rows="3" placeholder="Адреса*"
+                                                name="address"></textarea>
                                         </p>
                                         <span class="error_address"></span>
                                     </div>
                                 </div>
-    
-    
-    
-    
-    
-    
+
                                 <div class="control-group">
                                     <div class="controls">
                                         <label class="control-label" for="af_delivery-method">Выберите способ
                                             оплаты:</label>
                                         <select id="payment-method" class="delivery-method" name="payment-method">
-                                            <option value="Оплата наличными при получении">Оплата наличными при получении
+                                            <option value="Оплата наличными при получении">Оплата наличными при
+                                                получении
                                             </option>
                                             <option value="Онлайн-оплата через сайт">Оплата с помощью liqpay</option>
                                         </select>
                                         <span class="error_payment-method"></span>
                                     </div>
                                 </div>
-    
+
                                 <div class="control-group">
                                     <div class="controls">
                                         <textarea style="width:100%" rows="3" placeholder="Комментарий"
@@ -243,20 +286,20 @@
                                         <span class="error_comment"></span>
                                     </div>
                                 </div>
-    
-    
+
+
                                 <div class="control-group">
                                     <div class="controls">
                                         <button type="submit" class="btn btn-primary get_food">Отправить</button>
                                     </div>
                                 </div>
-    
+
                                 <input type="hidden" name="af_action" value="aef84f6ed5b1e728ff1bd75358c1a396">
                             </form>
-    
-    
-    
-    
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -265,7 +308,7 @@
         </div>
     </div>
 
-    
+
 
 
     <footer class="footer-distributed">
