@@ -990,8 +990,9 @@ a.clicktitle.activ-title {
 /* cart page*/
 .row .cart-item-list{
     height: calc(100% - 165px);
+    /* width: 100%; */
     position: relative;
-    margin: 0 -50px 30px;
+    margin: 0 0px 30px;
     padding: 30px 50px;
     border-top: 1px solid rgba(169,144,113,0.2);
     border-bottom: 1px solid rgba(169,144,113,0.2);

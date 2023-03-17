@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+
+    
     let price = 0,
         priceText;
     $(".cart-item-list").find("> *").each(function () {

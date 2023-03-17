@@ -374,12 +374,7 @@ template {
     display: none;
 }
 
-svg {
-    width: initial;
-    height: initial;
-    fill: currentColor;
-    stroke: currentColor;
-}
+
 
 body {
     font-size: 14px;

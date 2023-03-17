@@ -16,6 +16,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/cartExchange.js"></script>
 </head>
 
 <body class="home-page index">
@@ -100,10 +101,9 @@
             <div class="main-section-product-pizza" id="pizza">
                 <div class="pr-container">
                     <h2 class="section-title">Піца</h2>
-                    <!-- <button id="button123" type="button" onclick="addPitsa()">Click Me!</button> -->
                     <div class="row">
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="97ef3296-36e7-443f-92df-d36fb1deca88" >
                                 <div class="product-image">
                                     <div class="img-wrap"> <img src="images/2.jpg"> </div>
                                 </div>
@@ -123,17 +123,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <script>
-                        function addPitsa() {
-                            let i = $("#pizza .pr-container .row");
-                            let e =
-                                '<div class="col-3"> <div class="product-item"><div class="product-image">        <div class="img-wrap">            <img src="images/2.jpg"/>        </div>    </div>    <div class="product-name-descr">  <h3 class="product-title"> pitsa1 </h3>        <div class="product-descr"> i love big pitsa and i cannot lie </div>    </div>    <div class="product-price">        <div class="pw-wrap">            <span class="price">від 50 ₴</span>        </div>        <div class="cart-wrap">            <span class="add-to-cart no-plus" data-group="pizza">вибрати</span>        </div>    </div></div></div>';
-                            i.append(e)
-                        }
-                    </script>
-
                 </div>
             </div>
 
@@ -142,9 +132,10 @@
                     <div class="row">
                         <h2 class="section-title">Закуски</h2>
                     </div>
+
                     <div class="row">
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="9802eef6-fff9-4b21-8d73-cda7e64bf977">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/704-01.png" alt="Все й одразу">
@@ -168,7 +159,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="803f52fb-6566-4b6c-85c9-2e4b4fd3c7ed">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/63-01.jpg" alt="Курячі стріпси">
@@ -190,7 +181,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="2e5bae4a-08f1-4024-9216-2fb95ccfcb96">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/65-01.jpg" alt="Курячі крильця лагідні">
@@ -214,7 +205,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="243bb4b5-11a1-4720-8c67-d29a8b4963d7">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/64-01.jpg" alt="Курячі крильця чилі">
@@ -238,7 +229,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="12c60a3e-7b0c-4212-873f-6ea8192f273e">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/60-01.jpg" alt="Картопля фрі">
@@ -262,7 +253,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="3f57e578-f7a0-4d63-8345-b9ef9f01fa14">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/445-01.jpg" alt="Картопля по-селянськи ">
@@ -286,7 +277,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="499d6861-f184-44b7-b24d-6f56916b96c3">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/446-01.jpg"
@@ -311,7 +302,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="841fab86-0841-4e78-bf9d-5592fdd5893f">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/61-01.jpg" alt="Моцарела фрі з ягідним соусом">
@@ -336,7 +327,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="8365e56d-be2d-41d2-8f45-c1bde7db7d65">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/55-01.jpg" alt="Цезар-рол ">
@@ -361,7 +352,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="674fb020-2053-4dca-957c-32966e853c8a">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/57-01.jpg" alt="Курка-шаурма">
@@ -385,7 +376,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -409,9 +400,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="7dbc3bab-8f6a-48c2-8ea5-c07ddd1eec68">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/30-01_1.jpg" alt="Грецький">
@@ -436,7 +427,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="b4c01eed-8e05-4854-aea1-84facaea8b69">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/32-01_1.jpg" alt="Цезар">
@@ -461,7 +452,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="949cfed3-1298-4d51-a50a-96fdbec54dea">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/452-01.jpg" alt="Легкий салат з сиром горгонзола">
@@ -484,7 +475,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -507,8 +498,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -532,8 +523,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -556,8 +547,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -581,8 +572,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -607,16 +598,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/389-01.jpg"
                                             alt="Короп запечений у дров'яній печі або гарячого копчення">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Короп запечений у дров'яній печі або гарячого копчення
@@ -633,16 +622,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/391-01.jpg"
                                             alt="Форель запечена у дров'яній печі або гарячого копчення">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Форель запечена у дров'яній печі або гарячого копчення
@@ -659,15 +646,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/406-01.jpg" alt="Стейк зі свинини ">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Стейк зі свинини </h3>
@@ -683,15 +668,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/407-01.jpg" alt="Стейк курячий ">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Стейк курячий </h3>
@@ -707,8 +690,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -731,15 +714,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/393-01.jpg" alt="Шашлик зі свинини">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Шашлик зі свинини</h3>
@@ -755,15 +736,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/395-01.jpg" alt="Тарілка до пива">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Тарілка до пива</h3>
@@ -780,8 +759,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
+                        </div> -->
+                        <!-- <div class="col-3">
                             <div class="product-item">
                                 <div class="product-image">
                                     <div class="img-wrap">
@@ -805,9 +784,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="d6967379-b8f5-4b06-9fe0-2b55575dd8ed">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/462-01.jpg" alt="Паста Карбонара">
@@ -832,7 +811,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="f4c925c4-53cb-409f-83ac-1f5bed99b9c8">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/463-01.jpg" alt="Паста Квадро Формаджо">
@@ -857,7 +836,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="0f4de685-7bc9-460f-80d8-e99a1bb09394">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/461-01.jpg" alt="Паста з куркою та грибами">
@@ -882,7 +861,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="8a1da6bf-6d35-46f4-876a-90a4134944d9">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/150-01.jpg" alt="Хрумкі тости">
@@ -916,7 +895,7 @@
                     </div>
                     <div class="row">
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="21b16ad6-16a1-49f6-a1c9-fbecbf5c5138">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/471-01.jpg" alt="Каліфорнія з вугром">
@@ -941,7 +920,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="75f22327-0fa6-49f8-a835-06d6dacd52ef">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/472-01.jpg" alt="Філадельфія з вугром">
@@ -966,7 +945,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="39ac3f5b-6c26-451f-85f7-7716d98de4df">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/473-01.jpg" alt="Каліфорнія з лососем">
@@ -991,7 +970,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="6dd13860-24c4-49bd-9362-82626569e817">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/474-01.jpg" alt="Філадельфія з лососем">
@@ -1015,7 +994,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="3b681b51-3a2a-4e98-b768-47a50df3873c">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/475-01.jpg" alt="Макі з вугром">
@@ -1040,7 +1019,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="7f787abb-d3ea-46ce-808d-e4f7cde49269">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/476-01.jpg" alt="Макі з лососем">
@@ -1074,13 +1053,11 @@
                     </div>
                     <div class="row">
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="978450e1-eaa3-429e-93c4-8ddfaaf60f64">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/466-01.jpg" alt="Бургер «Цезар»">
                                     </div>
-
-
                                 </div>
                                 <div class="product-name-descr">
                                     <h3 class="product-title">Бургер «Цезар»</h3>
@@ -1099,7 +1076,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="17871ac0-21ed-4b12-b72d-1767fc687110">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/467-01.jpg" alt="Бургер «Нью Йорк»">
@@ -1124,7 +1101,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="135a944d-1d53-4915-b9c4-1cf9d5363ed1">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/468-01.jpg" alt="Бургер «Баварський»">
@@ -1149,7 +1126,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="79ac827c-0ae8-4c39-92ac-1894335ae6e4">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/469-01.jpg" alt="Чікенбургер">
@@ -1174,7 +1151,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="316d2236-2c49-456b-abcc-a98e7873a260">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/470-01.jpg" alt="Чізбургер">
@@ -1209,7 +1186,7 @@
                     </div>
                     <div class="row">
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="c76a21ce-9b9c-4452-b085-094f654c52e1">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/352-01.jpg" alt="Кока-кола">
@@ -1229,7 +1206,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="8cc11dd8-de24-42ce-9d5f-30a1f2adf378">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/19-01.jpg" alt="Пепсі">
@@ -1251,7 +1228,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="dc7ae78e-7a2f-41e0-a9a9-e2083fe10524">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/18-01.jpg" alt="Пепсі-кола">
@@ -1273,7 +1250,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="43efd2ea-c02a-47e1-8eaa-2649d0a4ace7">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/348-01.jpg" alt="Кока-кола">
@@ -1295,7 +1272,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="a4f878ac-30c5-464f-bc7c-5889aae0435f">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/349-01.jpg" alt="Фанта">
@@ -1317,7 +1294,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="ed1aba6c-7458-41e2-a416-81fbe5c71ddc">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/350-01.jpg" alt="Спрайт">
@@ -1339,7 +1316,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="d81bc9cb-4d32-4918-9897-c79d08fd9c23">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/351-01.jpg" alt="Холодний чай ">
@@ -1361,7 +1338,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="871e68fb-088f-4f70-a4e8-400855b4d4e7">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/126-01.jpg" alt="Миргородська">
@@ -1383,7 +1360,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="29622c7e-eaaf-4c84-8b09-fb3a81f9d1fc">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/132-01.jpg" alt="Моршинська с/г">
@@ -1405,7 +1382,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="ad7d3558-678d-41a4-9463-ae6a45404ba8">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/280-01.jpg" alt="Моршинська н/г">
@@ -1427,7 +1404,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="65e50109-bf06-4bdb-9f0e-14f7ecf4ab5a">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/356-01.jpg" alt="Сік Rich Екзотичний Нектар">
@@ -1449,7 +1426,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="7b3b7b3b-2429-4421-ace2-c3e9ac44e656">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/353-01.jpg" alt="Сік Rich Яблучний">
@@ -1471,7 +1448,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="1ea75b59-6060-441c-9e45-7211a2121b52">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/354-01.jpg" alt="Сік Rich    Томатний">
@@ -1493,7 +1470,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="c327cc41-7d87-445c-b2d6-7781820daa7e">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/355-01.jpg" alt="Сік Rich Апельсиновий">
@@ -1515,7 +1492,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="d1c84098-fdc1-4aad-814e-9a64fa4262eb">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/357-01.jpg" alt="Сік Rich Полуниця-банан">
@@ -1537,7 +1514,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="8a934612-4d72-4c13-81d4-b180d201cb93">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/277-01.jpg" alt="Львівське 1715">
@@ -1559,7 +1536,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="product-item">
+                            <div class="product-item" data-id="a5ebd12f-f3f2-4923-8c9a-06ba05c9e0b7">
                                 <div class="product-image">
                                     <div class="img-wrap">
                                         <img src="images/278-01.jpg" alt="Кроненбург">
@@ -1580,298 +1557,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="product-item">
-                                <div class="product-image">
-                                    <div class="img-wrap">
-                                        <img src="images/362-01.jpg" alt="Кіблер">
-                                    </div>
-
-
-                                </div>
-                                <h3 class="product-title">Кіблер</h3>
-                                <div class="product-liter"><span class="liter">1000 мл</span></div>
-                                <div class="product-price">
-                                    <span class="price">90 ₴</span>
-                                    <span class="add-to-cart " id="b362">в кошик</span>
-                                    <div class="amountBlock " id="q362">
-                                        <span class="minus">-</span>
-                                        <input type="text" value="0" readonly data-id="362">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="pizza_card" class="city-select-fixed-overlay city-select-fixed-overlay__modal">
-            <div class="modal">
-                <div class="modal_container">
-                    <div class="img"></div>
-                    <div class="info">
-                        <div class="info-base">
-                            <div class="info-base-footer">
-                                <div class="close">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M9.84606 12.4986L0.552631 3.20519C-0.1806 2.47196 -0.1806 1.28315 0.552631 0.549923C1.28586 -0.183308 2.47466 -0.183308 3.20789 0.549923L12.5013 9.84335L21.792 0.552631C22.5253 -0.1806 23.7141 -0.1806 24.4473 0.552631C25.1805 1.28586 25.1805 2.47466 24.4473 3.20789L15.1566 12.4986L24.45 21.792C25.1832 22.5253 25.1832 23.7141 24.45 24.4473C23.7168 25.1805 22.528 25.1805 21.7947 24.4473L12.5013 15.1539L3.20519 24.45C2.47196 25.1832 1.28315 25.1832 0.549923 24.45C-0.183308 23.7168 -0.183308 22.528 0.549923 21.7947L9.84606 12.4986Z"
-                                            fill="#333333" />
-                                    </svg>
-                                </div>
-                                <div class="info-base-footer-scroll">
-                                    <div class="row title">
-                                        <div class="name"></div>
-                                    </div>
-                                    <div class="row params"></div>
-                                    <div class="row components"></div>
-                                    <div class="product-item">
-                                        <div class="propuct-size">
-                                            <div class="propuct-size-wrap"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row add">
-                                        <span class="title">Додати в піцу</span>
-                                        <section></section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-btn">
-                            <button class="btn">додати в кошик</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div id="popup-cart" class="" style="display: none;">
         <div class="cart-container">
             <div class="title">Корзина</div>
             <div class="cart-item-list ps-container">
-                <!-- <div class="cart-item" data-product-id="9283">
-                    <div class="img">
-                        <img src="images/126-01.jpg">
-                    </div>
-                    <div class="description">
-                        <div class="item-title">
-                            Гурмео метровая
-                            <span class="subtitle"></span>
-                        </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                                
-                                <input type="text" class="count-field" value="1" readonly="">
-                                
-                                <div  class=" spin-btn add-count js-increment-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="item-price">
-                            489 грн
-                        </div>
-                    </div>
-                    <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" />
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" />
-                            </svg>
-                    </a>
-                </div>
-                <div class="cart-item" data-product-id="9283">
-                    <div class="img">
-                        <img src="images/150-01.jpg">
-                    </div>
-                    <div class="description">
-                        <div class="item-title">
-                            Гурмео метровая
-                            <span class="subtitle"></span>
-                        </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                                
-                                <input type="text" class="count-field" value="1" readonly="">
-                                
-                                <div  class="spin-btn add-count js-increment-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="item-price">
-                            489 грн
-                        </div>
-                    </div>
-                    <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" />
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" />
-                            </svg>
-                    </a>
-                </div>
-                <div class="cart-item" data-product-id="9283">
-                    <div class="img">
-                        <img src="images/150-01.jpg">
-                    </div>
-                    <div class="description">
-                        <div class="item-title">
-                            Гурмео метровая
-                            <span class="subtitle"></span>
-                        </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                                
-                                <input type="text" class="count-field" value="1" readonly="">
-                                
-                                <div  class="spin-btn add-count js-increment-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="item-price">
-                            489 грн
-                        </div>
-                    </div>
-                    <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" />
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" />
-                            </svg>
-                    </a>
-                </div>
-                <div class="cart-item" data-product-id="9283">
-                    <div class="img">
-                        <img src="images/150-01.jpg">
-                    </div>
-                    <div class="description">
-                        <div class="item-title">
-                            Гурмео метровая
-                            <span class="subtitle"></span>
-                        </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                                
-                                <input type="text" class="count-field" value="1" readonly="">
-                                
-                                <div  class="spin-btn add-count js-increment-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="item-price">
-                            489 грн
-                        </div>
-                    </div>
-                    <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" />
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" />
-                            </svg>
-                    </a>
-                </div>
-                <div class="cart-item" data-product-id="9283">
-                    <div class="img">
-                        <img src="images/150-01.jpg">
-                    </div>
-                    <div class="description">
-                        <div class="item-title">
-                            Гурмео метровая
-                            <span class="subtitle"></span>
-                        </div>
-                        <div class="item-count">
-                            <div class="spinner" data-product-id="9283">
-                                <div class="spin-btn remove-count js-decrement-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H30c-1.1 0-2-.9-2-2s.9-2 2-2h40c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1364-1210V474H-420v-1684h1784m8-8H-428V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                                
-                                <input type="text" class="count-field" value="1" readonly="">
-                                
-                                <div  class="spin-btn add-count js-increment-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-                                    <path
-                                        d="M72 50c0 1.1-.9 2-2 2H52v18c0 1.1-.9 2-2 2s-2-.9-2-2V52H30c-1.1 0-2-.9-2-2s.9-2 2-2h18V30c0-1.1.9-2 2-2s2 .9 2 2v18h18c1.1 0 2 .9 2 2zm16 0c0 21-17 38-38 38S12 71 12 50s17-38 38-38 38 17 38 38zm-4 0c0-18.8-15.2-34-34-34S16 31.2 16 50s15.2 34 34 34 34-15.2 34-34z" />
-                                    <path fill="#00F" d="M1504-1210V474H-280v-1684h1784m8-8H-288V482h1800v-1700z" />
-                                </svg>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="item-price">
-                            489 грн
-                        </div>
-                    </div>
-                    <a class="remove js-remove-from-cart" data-id="9283" data-current-quantity="1" data-contain-ids="" href="javascript:;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64">
-                            <path
-                                d="M17.586 46.414c.391.391.902.586 1.414.586s1.023-.195 1.414-.586L32 34.828l11.586 11.586c.391.391.902.586 1.414.586s1.023-.195 1.414-.586a2 2 0 0 0 0-2.828L34.828 32l11.586-11.586a2 2 0 1 0-2.828-2.828L32 29.172 20.414 17.586a2 2 0 1 0-2.828 2.828L29.172 32 17.586 43.586a2 2 0 0 0 0 2.828z" />
-                            <path
-                                d="M32 64c8.547 0 16.583-3.329 22.626-9.373C60.671 48.583 64 40.547 64 32s-3.329-16.583-9.374-22.626C48.583 3.329 40.547 0 32 0S15.417 3.329 9.374 9.373C3.329 15.417 0 23.453 0 32s3.329 16.583 9.374 22.626C15.417 60.671 23.453 64 32 64zM12.202 12.202C17.49 6.913 24.521 4 32 4s14.51 2.913 19.798 8.202C57.087 17.49 60 24.521 60 32s-2.913 14.51-8.202 19.798C46.51 57.087 39.479 60 32 60s-14.51-2.913-19.798-8.202C6.913 46.51 4 39.479 4 32s2.913-14.51 8.202-19.798z" />
-                            </svg>
-                    </a>
-                </div>
-
-                
-                 -->
-
             </div>
             <div class="js-popup-summary" data-qty="0">
                 <div class="full-price">
