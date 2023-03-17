@@ -208,8 +208,8 @@ $(document).ready(function () {
         console.log(cart)
         localStorage.cart = JSON.stringify(cart);
         return o.val(t), o.change(), !1
-    })), jQuery("#popup-cart").on("click", "a", (function () {
-
+    })), jQuery("#popup-cart").on("click", "a.remove", (function () {
+        
         let count = jQuery(".price-in-bag").text()
         let id = $(this).parent().find(".description").find(".item-count").find(".spinner").find("input").attr("data-id")
         $(".page-index").find(`input[data-id = "${id}"]`).val(0)
@@ -224,15 +224,13 @@ $(document).ready(function () {
         let orderPrice = $(".js-popup-summary").find("#currentPrice").text()
 
         o = parseInt(orderPrice.substring(0,orderPrice.length-4)) - (parseInt(price.substring(0,price.length-2)) * parseInt(itemCount))
-        //console.log(itemCount,typeof(itemCount))
         orderPrice = o.toString() + " грн"
         $(".js-popup-summary").find("#currentPrice").text(orderPrice)
-        
-        let itemId = $(this).parent().data("id")
 
+        let itemId = $(this).parent().data("id")
         delete cart[itemId]
         localStorage.cart = JSON.stringify(cart);
-        console.log(cart)
+        console.log($(this))
         
 
     })), jQuery("#menu").on("click", "a", (function () {
@@ -249,7 +247,7 @@ $(document).ready(function () {
             if (!div.is(e.target) && div.has(e.target).length === 0) {
                 $("#popup-cart").hide().removeClass("open");
             }
-        }
+        } 
     })
 
     // , $(".price-in-bag").change(function() {
