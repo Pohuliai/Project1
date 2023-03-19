@@ -3,27 +3,9 @@
 
 
 $(document).ready(function () {
-    if (JSON.parse(localStorage.getItem("cart")) == null) {
-        cart = {}
-    } else {
-        cart = JSON.parse(localStorage.getItem("cart"))
-        if (Object.keys(cart).length > 0) {
-            console.log(cart)
-            console.log(Object.keys(cart).length)
-            $(".price-in-bag").removeClass("hidden")
-            for (let key in cart) {
-                if (cart.hasOwnProperty(key)) {
-                    $(`div[data-id=${key}]`).find(".product-price").find(".add-to-cart").hide()
-                    $(`div[data-id=${key}]`).find(".product-price").find(".amountBlock").addClass("shown").find("input").val(cart[key].amount)
-                    let count = $(".price-in-bag").text()
-                    let amount = parseInt(count) + cart[key].amount
-                    $(".price-in-bag").text(amount.toString())
-                    //console.log(amount, typeof(amount))
-                    refreshCart($(`div[data-id=${key}]`))
-                }
-            }
-        }
-    }
+    
+    refreshPage("")
+    
 
 
 
@@ -40,7 +22,24 @@ $(document).ready(function () {
         }
     })
 
-
+    // window.onstorage = event =>{
+    //     bufferCart = JSON.parse(localStorage.getItem("cart"))
+    //     for (let key in bufferCart) {
+    //         console.log(bufferCart[key])
+    //         console.log(JSON.parse(event.oldValue)[key])
+    //         if(JSON.parse(event.oldValue)[key] == undefined){
+    //             console.log(key)
+    //             cart = JSON.parse(localStorage.getItem("cart"))
+    //             refreshCart(key)
+    //             //$(`div[data-id=${key}]`).find('.description').find(".item-count").find(".spinner").find("input").addEventListener("click",refreshPage())
+    //             refreshPrice()
+    //         }
+    //     }
+    // }
+    window.onstorage = event =>{
+        //console.log(event.oldValue)
+        refreshPage(JSON.parse(event.oldValue))
+    }
 
 
 
@@ -105,6 +104,7 @@ $(document).ready(function () {
 
         if (cart[id].amount <= 0) {
             delete cart[id]
+            $(".cart-item-list").find(`input[data-id = "${o.attr('data-id')}"]`).parent().parent().parent().parent().remove()
         }
         localStorage.cart = JSON.stringify(cart);
 
@@ -309,4 +309,38 @@ function decBag() {
     let count = jQuery(".price-in-bag").text()
     count--
     jQuery(".price-in-bag").text(count)
+}
+
+function refreshPage(oldValue){
+    $("#currentPrice").text("0 грн")
+    $(".cart-item-list").empty()
+    $(".price-in-bag").text("0")
+    if (Object.keys(oldValue).length > 0) {
+        for (let key in oldValue) {
+            $(`div[data-id=${key}]`).find(".product-price").find(".add-to-cart").show().removeClass("disabled")
+            $(`div[data-id=${key}]`).find(".product-price").find(".amountBlock").removeClass("shown").find("input").val(0)
+        }}
+
+    
+    
+    if (JSON.parse(localStorage.getItem("cart")) == null) {
+        cart = {}
+    } else {
+        cart = JSON.parse(localStorage.getItem("cart"))
+        if (Object.keys(cart).length > 0) {
+            //console.log(cart)
+            //console.log(Object.keys(cart).length)
+            $(".price-in-bag").removeClass("hidden")
+            for (let key in cart) {
+                if (cart.hasOwnProperty(key)) {
+                    $(`div[data-id=${key}]`).find(".product-price").find(".add-to-cart").hide()
+                    $(`div[data-id=${key}]`).find(".product-price").find(".amountBlock").addClass("shown").find("input").val(cart[key].amount)
+                    let count = $(".price-in-bag").text()
+                    let amount = parseInt(count) + cart[key].amount
+                    $(".price-in-bag").text(amount.toString())
+                    refreshCart($(`div[data-id=${key}]`))
+                }
+            }
+        }
+    }
 }

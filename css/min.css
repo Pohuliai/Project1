@@ -2853,7 +2853,16 @@ body #sb_instagram .sbi_header_text h3:before {
     text-align: center;
     margin-bottom: 40px;
 }
+.center{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
 
+.form-shipping{
+    width: 50%;
+}
 .c-cart__cross-sell .c-product-grid__list {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -3336,7 +3345,6 @@ body #sb_instagram .sbi_header_text h3:before {
 .c-form__button,
 .comment-form .submit,
 .wpcf7-form input[type=submit],
-.wpcf7-form button,
 .woocommerce-Button:not(.woocommerce-button--previous):not(.woocommerce-button--next),
 .woocommerce-address-fields .button {
     display: inline-block;
@@ -3372,7 +3380,6 @@ body #sb_instagram .sbi_header_text h3:before {
 .post-password-form input[type=submit],
 .comment-form .submit:focus,
 .wpcf7-form input[type=submit]:focus,
-.wpcf7-form button:focus,
 .woocommerce-Button:focus {
     outline: none;
 }
@@ -11322,7 +11329,6 @@ screen and (max-height:300px) {
     .widget .button:hover,
     .woocommerce-widget-layered-nav-dropdown__submit:hover,
     .wpcf7-form input[type=submit]:hover,
-    .wpcf7-form button:hover,
     .woocommerce-Button:not(.woocommerce-Button--previous):not(.woocommerce-Button--next):hover,
     .woocommerce-address-fields .button:hover,
     .c-header__cart .widget_shopping_cart_content .button:hover,
@@ -11595,7 +11601,6 @@ span.post-page-numbers:not(.dots),
 .widget .button,
 .woocommerce-widget-layered-nav-dropdown__submit,
 .wpcf7-form input[type=submit],
-.wpcf7-form button,
 .woocommerce-Button:not(.woocommerce-Button--previous):not(.woocommerce-Button--next),
 .woocommerce-address-fields .button,
 .c-header__cart .widget_shopping_cart_content .button,
@@ -12079,6 +12084,12 @@ input::-webkit-inner-spin-button {
     float: right;
 }
 
+.controls1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .shop_btn {
     background: red;
     color: #fff;
@@ -12285,7 +12296,7 @@ textarea.custom_height {
     text-align: left;
 }
 
-#get_director .btn-primary {
+.btn-primary {
     margin-top: 30px;
 
     background: red;
@@ -12522,7 +12533,30 @@ select#pickup-method {
     width: 100%;
 }
 
-
+.btn-checkout{
+    float: right;
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #e40046;
+    border: 2px solid #e40046;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 350px;
+    height: 37px;
+    line-height: 1.6;
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.btn-checkout:hover{
+    background-color: #e40046;
+    color: #fff;
+}
 
 #exampleModal .desc,
 #exampleModal2 .desc,
