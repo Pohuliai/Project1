@@ -12360,6 +12360,7 @@ select#pickup-method {
 #get_pizza .af_phone.error,
 #new_form .af_phone.error,
 #korzina .af_fullname.error,
+#korzina .delivery-method.error,
 #korzina .af_phone.error,
 #form-buy .af_phone.error {
     border: 2px solid red !important;

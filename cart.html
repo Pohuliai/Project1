@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" id="ideapark-core-css" href="css/min.css" type="text/css" media="all">
-    
+
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/cart.js"></script>
@@ -81,7 +81,7 @@
         <div class="row">
             <div class="cart-place">
                 <div class="cart-item-list">
-                    
+                    <div class="empty-cart">Ваша корзина пуста <br> <a href="index.html"> На головну </a> </div>
                 </div>
                 <div class="total_price">Загальна сума: <span id="total_price">0</span> грн</div>
                 <!-- new form -->
@@ -89,33 +89,29 @@
                 <div class="row">
                     <div class="center">
                         <div id="order_block" class="form-shipping">
-                            <form id="korzina" action="korzina/" method="post"
+                            <form id="korzina" action="" method="get"
                                 class="ajax_form af_example form-horizontal wpcf7-form">
-                                <input type="hidden" name="submit1" value="submit1">
-                                <input id="price-total-retriver" type="hidden" name="price-total-retriver" value="2212">
 
                                 <div class="control-group">
                                     <label class="control-label" for="af_fullname">Ім'я*</label>
                                     <div class="controls">
-                                        <input type="text" class="af_fullname" name="fullname" value="" placeholder="">
-                                        <span class="error_fullname"></span>
+                                        <input type="text" class="af_fullname" name="fullname" value=""
+                                            placeholder="Введіть ваше ім'я">
                                     </div>
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for="af_fullname">Номер телефону*</label>
+                                    <label class="control-label" for="af_phone">Номер телефону*</label>
                                     <div class="controls">
                                         <input type="text" class="af_phone" name="phone" value=""
                                             placeholder="+38 (___) ___-__-__" im-insert="true">
-                                        <span class="error_phone"></span>
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label" for="af_email">Адреса електронної пошти</label>
                                     <div class="controls">
-                                        <input type="email" value="" placeholder="pivo@nure.ua">
-                                        <span class="error_email"></span>
+                                        <input type="email" class="af_email" value="" placeholder="pivo@nure.ua">
                                     </div>
                                 </div>
 
@@ -124,10 +120,9 @@
                                         доставки:</label>
                                     <div class="controls">
                                         <select id="delivery-method" class="delivery-method" name="delivery-method">
-                                            <option value="Курьерская доставка">Кур'єрська доставка по Харкову</option>
-                                            <option value="Самовывоз">Самовивіз</option>
+                                            <option value="Кур'єрська доставка">Кур'єрська доставка по Харкову</option>
+                                            <option value="Самовивіз">Самовивіз</option>
                                         </select>
-                                        <span class="error_delivery-method"></span>
                                     </div>
                                 </div>
 
@@ -135,14 +130,11 @@
                                     <div class="controls">
                                         <select id="pickup-method" class="delivery-method" style="display: none;"
                                             name="pickup-method">
-                                            <option id="first-pickup" value="ул. Салтовское шоссе, 248">г. Харьков, ул.
-                                                Салтовское шоссе, 248</option>
-                                            <option value="ул. 23 августа, 38">г. Харьков, ул. 23
-                                                августа, 38</option>
-                                            <option value="ул. Мирная, 19">г. Харьков, ул. Мирная, 19
+                                            <option id="first-pickup" value="проспект Науки 14">Харків, проспект Науки
+                                                14</option>
+                                            <option value="вулиця Сумська 18/20">Харків, вулиця Сумська 18/20</option>
                                             </option>
                                         </select>
-                                        <span class="error_delivery-method"></span>
                                     </div>
                                 </div>
 
@@ -152,27 +144,24 @@
                                             <textarea style="width:100%" rows="3" placeholder="Адреса*"
                                                 name="address"></textarea>
                                         </p>
-                                        <span class="error_address"></span>
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <div class="controls">
-                                        <label class="control-label" for="af_delivery-method">Выберите способ
-                                            оплаты:</label>
+                                        <label class="control-label" for="af_delivery-method">Выберіть спосіб
+                                            оплати:</label>
                                         <select id="payment-method" class="delivery-method" name="payment-method">
-                                            <option value="Оплата наличными при получении">Оплата наличными при
-                                                получении
+                                            <option value="Оплата наличными при получении">Готівкою при отриманні
                                             </option>
-                                            <option value="Онлайн-оплата через сайт">Оплата с помощью liqpay</option>
+                                            <option value="Мені на картку">5168 7573 8390 1321</option>
                                         </select>
-                                        <span class="error_payment-method"></span>
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <div class="controls">
-                                        <textarea style="width:100%" rows="3" placeholder="Комментарий"
+                                        <textarea style="width:100%" rows="3" placeholder="Коментар"
                                             name="comment"></textarea>
                                         <span class="error_comment"></span>
                                     </div>
@@ -184,8 +173,6 @@
                                         <button type="submit" class="btn-checkout">Замовити!</button>
                                     </div>
                                 </div>
-
-                                <input type="hidden" name="af_action" value="aef84f6ed5b1e728ff1bd75358c1a396">
                             </form>
 
 
