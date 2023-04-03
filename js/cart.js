@@ -8,10 +8,29 @@ let order = {
     "comment": null
 }
 
+let payments = 
+     [{
+        "id": "6ef05fab-edfc-4862-a934-3974fbb6d3f9",
+        "title": "Оплата готівкою при отриманні"
+    }, {
+        "id": "5bb60aad-75ce-4f78-a679-4e0b778769ee",
+        "title": "Оплата за допомогою liqpay"
+    }]
+
+let deliveries = [{
+        "id": "576663f2-88a8-42ad-bf12-ace733b6cf40",
+        "title": "Кур'єрська доставка по Харкову"
+    }, {
+        "id": "29655379-ef12-4d07-b793-08451e20806e",
+        "title": "Самовивіз"
+    }]
+let courier 
+//domain = 'https://localhost:7269';
+
 let contents = []
 let cont = {
-    dishId:null,
-    orderId:null,
+    dishId: null,
+    orderId: null,
     number: null
 }
 
@@ -21,6 +40,40 @@ let cart_item_list = '<div class="cart-item-list"> </div>'
 
 $(document).ready(function () {
 
+    // получение айди заказа при загрузке страницы
+    // $.ajax({
+    //     url: domain + '/api/order',
+    //     type: 'post',
+    //     contentType: 'application/json',
+    //     data: JSON.stringify(order),
+    //     beforeSend: function () {
+    //         //console.log(this.data);
+    //     },
+    //     success: function (result) {
+    //         //полученный id заказа
+    //         console.log("полученный id заказа");
+    //         console.log(result);
+    //         order.deliveryId = result
+    //         order.paymentId = result
+    //     }
+    // });
+
+    for (let i = 0; i < deliveries.length; i++ ){
+        if (deliveries[i].title == "Кур'єрська доставка по Харкову") {
+            courier = deliveries[i].id
+        }
+        newMethod = '<option value="'+ deliveries[i].id  +'">'+deliveries[i].title+'</option>'
+        $("#delivery-method").append(newMethod)
+    }
+
+    for (let i = 0; i < payments.length; i++ ){
+        newPay = '<option value="'+ payments[i].id  +'">'+payments[i].title+'</option>'
+        $("#payment-method").append(newPay)
+    }
+   
+
+    
+
     if (JSON.parse(localStorage.getItem("cart")) == null) {
         cart = {}
         //console.log($(".cart-item-list").length)
@@ -28,41 +81,43 @@ $(document).ready(function () {
         $("#korzina").hide()
     } else {
         cart = JSON.parse(localStorage.getItem("cart"))
-        if ( Object.getOwnPropertyNames(cart).length == 0 ){
+        if (Object.getOwnPropertyNames(cart).length == 0) {
             $(".total_price").hide()
             $("#korzina").hide()
             //console.log(cart.length, cart)
         } else {
-        $(".empty-cart").remove()
-        $("#total_price").text("0")
-        $(".total_price").show()
-        $("#korzina").show()
-        if (Object.keys(cart).length > 0) {
-            //console.log(cart)
-            console.log(Object.keys(cart))
-            for (let key in cart) {
-                refreshCart(key)
+            $(".empty-cart").remove()
+            $("#total_price").text("0")
+            $(".total_price").show()
+            $("#korzina").show()
+            if (Object.keys(cart).length > 0) {
+                //console.log(cart)
+                //console.log(Object.keys(cart))
+                for (let key in cart) {
+                    refreshCart(key)
+                }
             }
-        }}
+        }
     }
 
     window.onstorage = event => {
         console.log("update")
-        
+
         cart = JSON.parse(localStorage.getItem("cart"))
-        if(Object.getOwnPropertyNames(cart).length == 0){
+        if (Object.getOwnPropertyNames(cart).length == 0) {
             $(".total_price").hide()
             $("#korzina").hide()
             $(".cart-item-list").append(empty)
         } else {
-        $(".cart-item-list").empty()
-        $(".total_price").show()
-        $("#korzina").show()
-        //$(".cart-place").prepend(cart_item_list)
-        for (let key in cart) {
-            refreshCart(key)
+            $(".cart-item-list").empty()
+            $(".total_price").show()
+            $("#korzina").show()
+            //$(".cart-place").prepend(cart_item_list)
+            for (let key in cart) {
+                refreshCart(key)
+            }
+            refreshPrice()
         }
-        refreshPrice()}
     }
 
 
@@ -131,11 +186,10 @@ $(document).ready(function () {
         return o.val(t), o.change(), !1
     })), $("#delivery-method").change(function () {
 
-        if ($(this).val() == "Кур'єрська доставка") {
+        if ($(this).val() == courier) {
             $('textarea[name="address"]').show()
             $("#pickup-method").hide()
         } else {
-
             $('textarea[name="address"]').hide()
             $("#pickup-method").show()
         }
@@ -172,37 +226,28 @@ $(document).ready(function () {
 
         order.customerMail = $(".af_email").val()
         order.comment = $('textarea[name="comment"]').val()
+        order.deliveryId = $("#delivery-method").val()
+        order.paymentId = $("#payment-method").val()
         let cart = JSON.parse(localStorage.getItem("cart"))
         let i = 0
         for (let key in cart) {
-            // if (i == 0){
-            //     contents[0].dishId = key
-            //     contents[0].orderId = i
-            //     contents[0].number = cart[key].amount
-            // } else {
             cont.dishId = key
             cont.orderId = i
             cont.number = cart[key].amount
             contents.push(cont)
             cont = {}
-            // }
             i++
-            //console.log(key)
+
         }
         console.log(order)
         console.log(contents)
         return false
-
-
-
-        // console.log("pivo")
-        // return false
     }))
 
 })
 
 function refreshCart(id) {
-    //cart = JSON.parse(localStorage.getItem("cart"))
+
     let name = cart[id].title
     let amount = cart[id].amount
     let price = cart[id].price
